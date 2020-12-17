@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,14 +62,21 @@ Route::get('/posts/{id}', function($id) use ($posts) {
     return view('posts.show', ['post' => $posts[$id]]);
 })->name('posts.show');
 
+//if we plan and using query paramaters like /posts/1?page=1&limit=5 you can
+//achieve this by using request all method or being more specic request query
 Route::get('/posts', function() use ($posts) {
+//    not using this for now but used as an example
+    (int)request()->query('page', 1);
+
     return view('posts.index', ['posts' => $posts]);
 })->name('posts.index');
 
 // optional parameter must then have a default set in the function
+// can apply middleware easily, for all pre-configured middleware look in app/http/kernal then
+// we can apply it by using middleware method
 Route::get('recent-posts/{days_ago?}', function($daysAgo = 20) {
     return 'Posts from ' . $daysAgo . ' days ago';
-})->name('posts.recent.index');
+})->name('posts.recent.index')->middleware('guest');
 
 // constraining route parameters - must be of certain type or length etc - done by adding where clause and using
 // regular expressions against each parameter
@@ -78,6 +86,50 @@ Route::get('constraint/{id}', function($id) {
     // adding the below where clause would apply this to this route, however to apply to all routes see app/Providers
     // /RouteServiceProvider where i added the below so its used by all
     // ->where(['id' => '[0-9]+']);
+
+// can also return http responses which is useful when you need to return extra detail like
+// a certain header etc - note response also has a view method which can be chained
+// response()->view()
+Route::get('/fun/responses', function() use($posts) {
+    return response($posts, 201)
+        ->header('Content-Type', 'application/json')
+        ->cookie('MY_COOKIE', 'Glen Adamson', 3600);
+});
+
+// we can group route together if they share a common prefix, name or middleware
+Route::prefix('/fun')->name('fun.')->group(function () use($posts) {
+    // can do a redirect with a route to do something but then redirect to another route
+    Route::get('/redirect', function() {
+        return redirect('/contact');
+    })->name('redirect');
+
+//back will redirect back to the last page
+    Route::get('/back', function() {
+        return back();
+    })->name('back');
+
+//using a named route
+    Route::get('/named-route', function() {
+        return redirect()->route('posts.show', ['id' => 1]);
+    })->name('named-route');
+
+//away will redirect to another webpage outside the app = external link
+    Route::get('/away', function() {
+        return redirect()->away('http://google.com');
+    })->name('away');
+
+//return a pure json response
+    Route::get('/json', function() use($posts) {
+        return response()->json($posts);
+    })->name('json');
+
+//return a file download
+    Route::get('/download', function() use($posts) {
+        return response()->download(public_path('/fake.jpeg'), 'face.jpeg');
+    })->name('download');
+});
+
+
 
 
 
