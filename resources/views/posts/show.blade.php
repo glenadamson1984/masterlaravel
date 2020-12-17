@@ -12,6 +12,14 @@
         <div>well this must be an old blogpost then</div>
     @endif
 
+    @unless($post['is_new'])
+        <div>is is an old post using unless</div>
+    @endunless
+
+    @isset($post['has_comments'])
+        <div>has comments exists</div>
+    @endisset
+
     <h1>{{ $post['title'] }}</h1>
     <p>{{ $post['content'] }}</p>
 @endsection

@@ -33,20 +33,25 @@ Route::get('/post/{id}', function($id) {
     return 'Blog Post ' . $id;
 })->name('post.show');
 
+
+$posts = [
+    1 => [
+        'title' => 'intro to laravel',
+        'content' => 'short intro to laravel',
+        'is_new' => true,
+        'has_comments' => true
+    ],
+    2 => [
+        'title' => 'intro to php',
+        'content' => 'short intro to php',
+        'is_new' => false
+    ]
+];
+
 //passing and rendering data in a view, also see view for blade directive conditionals
-Route::get('/posts/{id}', function($id) {
-    $posts = [
-        1 => [
-            'title' => 'intro to laravel',
-            'content' => 'short intro to laravel',
-            'is_new' => true
-        ],
-        2 => [
-            'title' => 'intro to php',
-            'content' => 'short intro to php',
-            'is_new' => false
-        ]
-    ];
+// also to make use of a variable declared outside the anonymous function we need to
+// use the use keyword
+Route::get('/posts/{id}', function($id) use ($posts) {
 
     // this will work if we provide an id of 1 or 2 but anything other number will throw an
     // unexpected error so we can use abortif and handle the error better
@@ -55,6 +60,10 @@ Route::get('/posts/{id}', function($id) {
 
     return view('posts.show', ['post' => $posts[$id]]);
 })->name('posts.show');
+
+Route::get('/posts', function() use ($posts) {
+    return view('posts.index', ['posts' => $posts]);
+})->name('posts.index');
 
 // optional parameter must then have a default set in the function
 Route::get('recent-posts/{days_ago?}', function($daysAgo = 20) {
