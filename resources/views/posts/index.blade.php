@@ -44,4 +44,18 @@
         @endphp
     @endwhile
 
+    @foreach($posts as $key => $post)
+        {{--        we also also use include and have our code in a partial page for reusability--}}
+{{--        we dont need to pass the variables as its smart enough to know the variables it needs--}}
+{{--        based on where its called in code. if a specific added variable is need we can pass--}}
+{{--        an array as a second argument to include--}}
+        @include('posts.partials.post')
+    @endforeach
+
+{{--    an alternative to using a foreach and then including a partial is an each direction--}}
+{{--    with it you pass the name of the partial, the collection to iterate over, and the name of the--}}
+{{--    individual item in the variable we need - its downside is it wont pass all available--}}
+{{--    arguments i.e the loop variable in this case so can only be used for simpler rendering--}}
+    @each('posts.partials.post', $posts, 'post')
+
 @endsection
