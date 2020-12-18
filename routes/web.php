@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PostsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,19 +23,31 @@ use Illuminate\Support\Facades\Route;
 //})->name('home.index');
 
 // to this
-Route::view('/', 'home.index')->name('home.index');
+//Route::view('/', 'home.index')->name('home.index');
+//
+//Route::get('/contact', function () {
+//    return view('home.contact', []);
+//})->name('home.contact');
 
-Route::get('/contact', function () {
-    return view('home.contact', []);
-})->name('home.contact');
+
+//we can also move these routes to a controller
+Route::get('/', [HomeController::class, 'home'])->name('home.index');
+Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
+
+// if controller only have a single action you do not need to pass an array of actions
+Route::get('/single', AboutController::class);
+
+// use a PostsController as a resource will bind all possible routes but we can specify the specific ones
+// we want using the only method, can also use except for the inverse
+Route::resource('posts', PostsController::class)->only(['index', 'show']);
 
 // parameters are passed to the function in the order in which they are provided so names can be anything
 // but typically they should be the same name as the input parameter for best practice
 // i.e the below could be
 // Route::get('/posts/{id}', function($BlogPostID) {
-Route::get('/post/{id}', function($id) {
-    return 'Blog Post ' . $id;
-})->name('post.show');
+//Route::get('/post/{id}', function($id) {
+//    return 'Blog Post ' . $id;
+//})->name('post.show');
 
 
 $posts = [
@@ -52,24 +67,24 @@ $posts = [
 //passing and rendering data in a view, also see view for blade directive conditionals
 // also to make use of a variable declared outside the anonymous function we need to
 // use the use keyword
-Route::get('/posts/{id}', function($id) use ($posts) {
-
-    // this will work if we provide an id of 1 or 2 but anything other number will throw an
-    // unexpected error so we can use abortif and handle the error better
-    // here we check if the array at the index is not set then throw a 404
-    abort_if(!isset($posts[$id]), 404);
-
-    return view('posts.show', ['post' => $posts[$id]]);
-})->name('posts.show');
+//Route::get('/posts/{id}', function($id) use ($posts) {
+//
+//    // this will work if we provide an id of 1 or 2 but anything other number will throw an
+//    // unexpected error so we can use abortif and handle the error better
+//    // here we check if the array at the index is not set then throw a 404
+//    abort_if(!isset($posts[$id]), 404);
+//
+//    return view('posts.show', ['post' => $posts[$id]]);
+//})->name('posts.show');
 
 //if we plan and using query paramaters like /posts/1?page=1&limit=5 you can
 //achieve this by using request all method or being more specic request query
-Route::get('/posts', function() use ($posts) {
-//    not using this for now but used as an example
-    (int)request()->query('page', 1);
-
-    return view('posts.index', ['posts' => $posts]);
-})->name('posts.index');
+//Route::get('/posts', function() use ($posts) {
+////    not using this for now but used as an example
+//    (int)request()->query('page', 1);
+//
+//    return view('posts.index', ['posts' => $posts]);
+//})->name('posts.index');
 
 // optional parameter must then have a default set in the function
 // can apply middleware easily, for all pre-configured middleware look in app/http/kernal then
