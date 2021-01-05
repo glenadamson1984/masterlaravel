@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fe9beef-7507-4687-9aaf-8b9d9bd36e4f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/BlogPost.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_05_154243_create_blog_posts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fake.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +145,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -189,7 +195,11 @@
       <option name="presentableId" value="Default" />
       <updated>1607975780938</updated>
       <workItem from="1607975782669" duration="796000" />
-      <workItem from="1607976855818" duration="12811000" />
+      <workItem from="1607976855818" duration="19320000" />
+      <workItem from="1609754610089" duration="78000" />
+      <workItem from="1609754790371" duration="70000" />
+      <workItem from="1609861177910" duration="45000" />
+      <workItem from="1609861234508" duration="2623000" />
     </task>
     <task id="LOCAL-00001" summary="updates">
       <created>1608126740757</created>
@@ -212,7 +222,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608220693990</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updates">
+      <created>1608223312865</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608223312865</updated>
+    </task>
+    <task id="LOCAL-00005" summary="using a resource controller">
+      <created>1608296542234</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608296542234</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,9 +252,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="using a resource controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="using a resource controller" />
   </component>
 </project>
