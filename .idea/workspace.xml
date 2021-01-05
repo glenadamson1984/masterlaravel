@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fe9beef-7507-4687-9aaf-8b9d9bd36e4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/BlogPost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_05_154243_create_blog_posts_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fake.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +196,7 @@
       <workItem from="1609754610089" duration="78000" />
       <workItem from="1609754790371" duration="70000" />
       <workItem from="1609861177910" duration="45000" />
-      <workItem from="1609861234508" duration="2623000" />
+      <workItem from="1609861234508" duration="4026000" />
     </task>
     <task id="LOCAL-00001" summary="updates">
       <created>1608126740757</created>
@@ -236,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608296542234</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new">
+      <created>1609880653500</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609880653500</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +261,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updates" />
     <MESSAGE value="using a resource controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="using a resource controller" />
+    <MESSAGE value="new" />
+    <option name="LAST_COMMIT_MESSAGE" value="new" />
   </component>
 </project>
