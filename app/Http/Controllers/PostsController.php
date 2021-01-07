@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePost;
 use App\Models\BlogPost;
 use Illuminate\Http\Request;
 
@@ -47,12 +48,39 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePost $request)
     {
-        $post = new BlogPost();
-        $post->title = $request->input('title');
-        $post->content = $request->input('content');
-        $post->save();
+        // we can have rules in the controller method itself like the below and simply
+        // pass the request option above as a parameter but for more complex rules its
+        // best practice to do php artisan make:request StorePost and add rules there
+//        $request->validate([
+//            'title' => 'bail|required|min:5|max:100',
+//            'content' => 'required|min:10'
+//        ]);
+
+        $validated = $request->validated();
+
+        // as we are using are own request we don't use the input variables from the request object
+        // but rather those which have been validated so change this
+
+//        $post = new BlogPost();
+//        $post->title = $request->input('title');
+//        $post->content = $request->input('content');
+//        $post->save();
+
+        // to this
+//        $post = new BlogPost();
+//        $post->title = $validated['title'];
+//        $post->content = $validated['content'];
+//        $post->save();
+
+        //also if we modify our BlogPost model and add protected fillable this essentially
+        // turns on mass assignment for one or more columns of data so we can make it
+        // simpler by doing this
+        $post = BlogPost::create($validated);
+
+        //flash session variables - see app.blade.php for reading from this session
+        $request->session()->flash('status', 'this blog was created');
 
         return redirect()->route('posts.show', ['post' => $post->id]);
     }
@@ -75,11 +103,11 @@ class PostsController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        return view('posts.edit', ['post' => BlogPost::findOrFail($id)]);
     }
 
     /**
