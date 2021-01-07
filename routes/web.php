@@ -39,7 +39,10 @@ Route::get('/single', AboutController::class);
 
 // use a PostsController as a resource will bind all possible routes but we can specify the specific ones
 // we want using the only method, can also use except for the inverse
-Route::resource('posts', PostsController::class)->only(['index', 'show', 'create', 'store', 'edit', 'update']);
+//Route::resource('posts', PostsController::class)->only(['index', 'show', 'create', 'store', 'edit', 'update']);
+// as we are using them all i have now removed the only method
+Route::resource('posts', PostsController::class);
+
 
 // parameters are passed to the function in the order in which they are provided so names can be anything
 // but typically they should be the same name as the input parameter for best practice
