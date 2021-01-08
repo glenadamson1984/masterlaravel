@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2fe9beef-7507-4687-9aaf-8b9d9bd36e4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/partials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/partials/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/partials/post.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +198,8 @@
       <workItem from="1609861177910" duration="45000" />
       <workItem from="1609861234508" duration="4213000" />
       <workItem from="1609961406074" duration="3019000" />
-      <workItem from="1610031998170" duration="5513000" />
+      <workItem from="1610031998170" duration="6086000" />
+      <workItem from="1610122163406" duration="2553000" />
     </task>
     <task id="LOCAL-00001" summary="updates">
       <created>1608126740757</created>
@@ -295,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610037842421</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="adding some basic styling to the project">
+      <created>1610096891697</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610096891697</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +325,7 @@
     <MESSAGE value="basic CRUD" />
     <MESSAGE value="added composer/ui package to install vue, bootstrap scaffolding" />
     <MESSAGE value="we can pull in the assets to blade or using mix for versioned updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="we can pull in the assets to blade or using mix for versioned updates" />
+    <MESSAGE value="adding some basic styling to the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding some basic styling to the project" />
   </component>
 </project>
