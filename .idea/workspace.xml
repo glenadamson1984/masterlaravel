@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fe9beef-7507-4687-9aaf-8b9d9bd36e4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_090742_create_comments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/441cc189-5f17-488e-8feb-33e2537a355e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/441cc189-5f17-488e-8feb-33e2537a355e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BlogPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BlogPost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_11_101044_create_profiles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_11_101044_create_profiles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/partials/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/partials/post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/PostTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/PostTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +201,7 @@
       <workItem from="1609961406074" duration="3019000" />
       <workItem from="1610031998170" duration="6086000" />
       <workItem from="1610122163406" duration="8158000" />
-      <workItem from="1610399842239" duration="2351000" />
+      <workItem from="1610399842239" duration="8442000" />
     </task>
     <task id="LOCAL-00001" summary="updates">
       <created>1608126740757</created>
@@ -323,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610360767428</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="one to many relationships">
+      <created>1610444488474</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1610444488474</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,6 +358,7 @@
     <MESSAGE value="adding some basic styling to the project" />
     <MESSAGE value="first tests" />
     <MESSAGE value="create a one to one relationship" />
-    <option name="LAST_COMMIT_MESSAGE" value="create a one to one relationship" />
+    <MESSAGE value="one to many relationships" />
+    <option name="LAST_COMMIT_MESSAGE" value="one to many relationships" />
   </component>
 </project>

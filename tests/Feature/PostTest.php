@@ -32,6 +32,7 @@ class PostTest extends TestCase
 
         //Assert
         $response->assertSeeText('title');
+        $response->assertSeeText("No comments");
         $this->assertDatabaseHas('blog_posts', ['title' => 'title']);
     }
 
@@ -42,7 +43,7 @@ class PostTest extends TestCase
             'content' => 'at least 10 characters'
         ];
 
-        $this->post('/posts', $params)
+        $response = $this->post('/posts', $params)
             ->assertStatus(302)
             ->assertSessionHas('status');
 
