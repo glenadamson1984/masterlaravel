@@ -1117,8 +1117,9 @@ SELECT|sys.sys_config
       <DataType>bigint unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="334" parent="300" name="profiles_author_id_foreign">
+    <index id="334" parent="300" name="profiles_author_id_unique">
       <ColNames>author_id</ColNames>
+      <Unique>1</Unique>
       <Type>btree</Type>
     </index>
     <key id="335" parent="300" name="PRIMARY">
@@ -1126,11 +1127,10 @@ SELECT|sys.sys_config
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="336" parent="300" name="profiles_author_id_foreign">
+    <key id="336" parent="300" name="profiles_author_id_unique">
       <ColNames>author_id</ColNames>
-      <RefTableName>authors</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
+      <UnderlyingIndexName>profiles_author_id_unique</UnderlyingIndexName>
+    </key>
     <column id="337" parent="301" name="id">
       <Position>1</Position>
       <DataType>bigint unsigned|0s</DataType>
