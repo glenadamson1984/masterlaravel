@@ -18,21 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// this is more verbose syntax but here we are not actually passing any data so we can simplify this
-//Route::get('/', function () {
-//    return view('home.index', []);
-//})->name('home.index');
-
-// to this
-//Route::view('/', 'home.index')->name('home.index');
-//
-//Route::get('/contact', function () {
-//    return view('home.contact', []);
-//})->name('home.contact');
 
 
 //we can also move these routes to a controller
 Route::get('/', [HomeController::class, 'home'])->name('home.index');
+//    ->middleware('auth');
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 
 // if controller only have a single action you do not need to pass an array of actions
