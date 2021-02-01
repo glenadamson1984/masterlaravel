@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PostsController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -146,6 +147,8 @@ Route::prefix('/fun')->name('fun.')->group(function () use($posts) {
         return response()->download(public_path('/fake.jpeg'), 'face.jpeg');
     })->name('download');
 });
+
+Auth::routes();
 
 
 
