@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fe9beef-7507-4687-9aaf-8b9d9bd36e4f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_02_210500_add_user_to_blog_posts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/BlogPostsTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/CommentsTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/441cc189-5f17-488e-8feb-33e2537a355e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/441cc189-5f17-488e-8feb-33e2537a355e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/PostTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/PostTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +210,8 @@
       <workItem from="1611567200978" duration="217000" />
       <workItem from="1611586205181" duration="7216000" />
       <workItem from="1612170913398" duration="3990000" />
-      <workItem from="1612212039181" duration="4432000" />
+      <workItem from="1612212039181" duration="4598000" />
+      <workItem from="1612299654846" duration="6454000" />
     </task>
     <task id="LOCAL-00001" summary="updates">
       <created>1608126740757</created>
@@ -376,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612216531925</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="acting as in tests">
+      <created>1612255736070</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1612255736070</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,6 +423,8 @@
     <MESSAGE value="adding register view" />
     <MESSAGE value="error messages" />
     <MESSAGE value="login and auth middleware" />
-    <option name="LAST_COMMIT_MESSAGE" value="login and auth middleware" />
+    <MESSAGE value="acting as in tests" />
+    <MESSAGE value="seeders" />
+    <option name="LAST_COMMIT_MESSAGE" value="seeders" />
   </component>
 </project>
